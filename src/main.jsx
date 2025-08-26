@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";   // подключаем именно App.jsx
+import App from "./App.jsx";   // подключаем App.jsx
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(

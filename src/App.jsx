@@ -134,7 +134,7 @@ export default function App() {
       <section id="process" className="bg-black text-white">
         <div className="mx-auto max-w-6xl px-4 py-16">
           <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">Как это происходит</h2>
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
+        <div className="mt-8 grid gap-6 md:grid-cols-2">
             {[
               { n: "01", t: "Старт", d: "15-минутный созвон, бриф и доступы." },
               { n: "02", t: "Сборка", d: "Идея → крео → ленд → бот/квиз." },
@@ -194,5 +194,62 @@ export default function App() {
         <div className="mx-auto max-w-6xl px-4 py-16">
           <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">Кейсы</h2>
           <div className="mt-8 grid gap-6 md:grid-cols-2">
-            <div className="rounded
+            <div className="rounded-3xl border border-zinc-200 p-6 shadow-sm">
+              <h3 className="font-bold">Crypto / Betting</h3>
+              <p className="mt-2 text-zinc-700">+300% ROI за 2 недели. CTR ×3 благодаря дерзким крео.</p>
+            </div>
+            <div className="rounded-3xl border border-zinc-200 p-6 shadow-sm">
+              <h3 className="font-bold">E-commerce</h3>
+              <p className="mt-2 text-zinc-700">CPL -40%. Быстрые продажи с TikTok и Meta через WTF-подход.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ (black) */}
+      <section id="faq" className="bg-black text-white">
+        <div className="mx-auto max-w-6xl px-4 py-16">
+          <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">FAQ</h2>
+          <div className="mt-8 space-y-4 text-zinc-300">
+            <details>
+              <summary className="font-semibold cursor-pointer">Сколько стоит?</summary>
+              <p className="mt-2">Минимальный вход — от $1500 + бюджет на трафик.</p>
+            </details>
+            <details>
+              <summary className="font-semibold cursor-pointer">Где запускаете?</summary>
+              <p className="mt-2">Meta, TikTok, YouTube, VK, Яндекс. Подберём оптимально под нишу.</p>
+            </details>
+            <details>
+              <summary className="font-semibold cursor-pointer">А если не получится?</summary>
+              <p className="mt-2">Мы не обещаем чудес, но обещаем тесты, аналитику и понятный результат.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section id="cta" className="mx-auto max-w-6xl px-4 py-16">
+        <div className="rounded-3xl border border-black bg-gradient-to-br from-zinc-50 to-white p-8 md:p-12 shadow-sm">
+          <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight">Ну что, едем?</h3>
+          <p className="mt-2 max-w-2xl text-zinc-700">
+            Пиши «Хочу WTF» — и мы скинем план: что тестим, где льём и как въ*бываем конкурентов.
+          </p>
+          <div className="mt-6 flex flex-col sm:flex-row gap-4">
+            <a href={TELEGRAM_URL} target="_blank" className="rounded-full bg-black px-6 py-3 font-semibold text-white hover:bg-zinc-800 transition">
+              Написать в TG
+            </a>
+            <a href={`mailto:${EMAIL}?subject=Хочу%20WTF%20воронку`} className="rounded-full border border-black px-6 py-3 font-semibold hover:bg-black hover:text-white transition">
+              {EMAIL}
+            </a>
+            <button onClick={startQuiz} className="rounded-full border px-6 py-3 font-semibold hover:bg-zinc-100 transition">
+              Пройти квиз
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="border-t border-zinc-200 py-10 text-sm text-zinc-500">
+        <div className="mx-auto w-full max-w-6xl px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+         
 

@@ -1,9 +1,20 @@
 import React from "react";
 
-export default function WTFunnelLLanding() {
+export default function App() {
   return (
-    <div style={{ padding: 24, background: "#111", color: "#0f0", fontSize: 24 }}>
-      ✅ Рендер работает. Если ты это видишь — JS ок.
-    </div>
+    <main className="flex flex-col items-center justify-center min-h-screen bg-black text-white">
+      <h1 className="text-4xl font-bold mb-4 text-green-400">
+        🚀 FN AGENCY
+      </h1>
+      <p className="text-lg mb-6 text-gray-300">
+        Лендинг успешно работает на Vercel + React + Tailwind 🎉
+      </p>
+      <a
+        href="#contact"
+        className="px-6 py-3 bg-green-500 hover:bg-green-600 rounded-lg text-black font-semibold transition"
+      >
+        Связаться с нами
+      </a>
+    </main>
   );
 }

@@ -31,7 +31,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen w-full bg-white text-black">
-      {/* HEADER */}
+      {/* ========== HEADER ========== */}
       <header className="sticky top-0 z-40 backdrop-blur bg-white/90 border-b">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
           <div className="flex items-center gap-3">
@@ -51,7 +51,7 @@ export default function App() {
         </div>
       </header>
 
-      {/* HERO */}
+      {/* ========== HERO ========== */}
       <section className="relative overflow-hidden">
         <div className="mx-auto max-w-6xl px-4 py-16 md:py-24 relative z-10">
           <motion.h1
@@ -97,44 +97,33 @@ export default function App() {
         </div>
       </section>
 
-      {/* 7 DAYS */}
+      {/* ========== 7 DAYS ========== */}
       <section id="seven" className="bg-white">
         <div className="mx-auto max-w-6xl px-4 py-16">
           <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">Что получишь в первые 7 дней</h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
-            <div className="rounded-3xl border border-zinc-200 p-6 shadow-sm">
-              <h3 className="text-xl font-bold">Аудит & Идея</h3>
-              <p className="mt-2 text-zinc-600">Находим небанальный инсайт и формулируем Big Idea.</p>
-            </div>
-            <div className="rounded-3xl border border-zinc-200 p-6 shadow-sm">
-              <h3 className="text-xl font-bold">Креативы</h3>
-              <p className="mt-2 text-zinc-600">Снимаем/собираем 5–10 дерзких крео под ЦА.</p>
-            </div>
-            <div className="rounded-3xl border border-zinc-200 p-6 shadow-sm">
-              <h3 className="text-xl font-bold">Ленд-аттракцион</h3>
-              <p className="mt-2 text-zinc-600">Сайт, который сам по себе вирусится и сохраняется.</p>
-            </div>
-            <div className="rounded-3xl border border-zinc-200 p-6 shadow-sm">
-              <h3 className="text-xl font-bold">Бот / Квиз</h3>
-              <p className="mt-2 text-zinc-600">Греем и квалифицируем лидов прямо в мессенджере.</p>
-            </div>
-            <div className="rounded-3xl border border-zinc-200 p-6 shadow-sm">
-              <h3 className="text-xl font-bold">Трафик</h3>
-              <p className="mt-2 text-zinc-600">Запуск связок в Meta / TikTok с отсевом мусора.</p>
-            </div>
-            <div className="rounded-3xl border border-zinc-200 p-6 shadow-sm">
-              <h3 className="text-xl font-bold">Метрики</h3>
-              <p className="mt-2 text-zinc-600">Дэшборд и ежедневные короткие апдейты.</p>
-            </div>
+            {[
+              { t: "Аудит & Идея", d: "Находим небанальный инсайт и формулируем Big Idea." },
+              { t: "Креативы", d: "Снимаем/собираем 5–10 дерзких крео под ЦА." },
+              { t: "Ленд-аттракцион", d: "Сайт, который сам по себе вирусится и сохраняется." },
+              { t: "Бот / Квиз", d: "Греем и квалифицируем лидов прямо в мессенджере." },
+              { t: "Трафик", d: "Запуск связок в Meta / TikTok с отсевом мусора." },
+              { t: "Метрики", d: "Дэшборд и ежедневные короткие апдейты." },
+            ].map((c) => (
+              <div key={c.t} className="rounded-3xl border border-zinc-200 p-6 shadow-sm">
+                <h3 className="text-xl font-bold">{c.t}</h3>
+                <p className="mt-2 text-zinc-600">{c.d}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* PROCESS (black) */}
+      {/* ========== PROCESS (black) ========== */}
       <section id="process" className="bg-black text-white">
         <div className="mx-auto max-w-6xl px-4 py-16">
           <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">Как это происходит</h2>
-        <div className="mt-8 grid gap-6 md:grid-cols-2">
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
             {[
               { n: "01", t: "Старт", d: "15-минутный созвон, бриф и доступы." },
               { n: "02", t: "Сборка", d: "Идея → крео → ленд → бот/квиз." },
@@ -162,34 +151,26 @@ export default function App() {
         </div>
       </section>
 
-      {/* IMPACT */}
+      {/* ========== IMPACT ========== */}
       <section id="impact" className="bg-white">
         <div className="mx-auto max-w-6xl px-4 py-16">
           <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">Где срабатывает нестандарт</h2>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
-            <div className="rounded-3xl border border-zinc-200 p-6 shadow-sm">
-              <h3 className="font-bold">Ленты соцсетей</h3>
-              <p className="mt-2 text-zinc-600">
-                Когда обычная реклама пролистывается, WTF-креативы стопорят внимание.
-              </p>
-            </div>
-            <div className="rounded-3xl border border-zinc-200 p-6 shadow-sm">
-              <h3 className="font-bold">Рынки с конкуренцией</h3>
-              <p className="mt-2 text-zinc-600">
-                Когда все душат скидками, мы выбиваемся из строя и забираем клиентов.
-              </p>
-            </div>
-            <div className="rounded-3xl border border-zinc-200 p-6 shadow-sm">
-              <h3 className="font-bold">Товарка и услуги</h3>
-              <p className="mt-2 text-zinc-600">
-                E-com, крипта, ставки, SaaS — везде, где нужен креатив с яйцами.
-              </p>
-            </div>
+            {[
+              { t: "Ленты соцсетей", d: "Когда обычная реклама пролистывается, WTF-креативы стопорят внимание." },
+              { t: "Рынки с конкуренцией", d: "Когда все душат скидками, мы выбиваемся из строя и забираем клиентов." },
+              { t: "Товарка и услуги", d: "E-com, крипта, ставки, SaaS — везде, где нужен креатив с яйцами." },
+            ].map((c) => (
+              <div key={c.t} className="rounded-3xl border border-zinc-200 p-6 shadow-sm">
+                <h3 className="font-bold">{c.t}</h3>
+                <p className="mt-2 text-zinc-600">{c.d}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* CASES */}
+      {/* ========== CASES ========== */}
       <section id="cases" className="bg-white">
         <div className="mx-auto max-w-6xl px-4 py-16">
           <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">Кейсы</h2>
@@ -200,13 +181,13 @@ export default function App() {
             </div>
             <div className="rounded-3xl border border-zinc-200 p-6 shadow-sm">
               <h3 className="font-bold">E-commerce</h3>
-              <p className="mt-2 text-zinc-700">CPL -40%. Быстрые продажи с TikTok и Meta через WTF-подход.</p>
+              <p className="mt-2 text-zinc-700">CPL −40%. Быстрые продажи с TikTok и Meta через WTF-подход.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* FAQ (black) */}
+      {/* ========== FAQ (black) ========== */}
       <section id="faq" className="bg-black text-white">
         <div className="mx-auto max-w-6xl px-4 py-16">
           <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">FAQ</h2>
@@ -227,7 +208,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* ========== CTA ========== */}
       <section id="cta" className="mx-auto max-w-6xl px-4 py-16">
         <div className="rounded-3xl border border-black bg-gradient-to-br from-zinc-50 to-white p-8 md:p-12 shadow-sm">
           <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight">Ну что, едем?</h3>
@@ -235,7 +216,7 @@ export default function App() {
             Пиши «Хочу WTF» — и мы скинем план: что тестим, где льём и как въ*бываем конкурентов.
           </p>
           <div className="mt-6 flex flex-col sm:flex-row gap-4">
-            <a href={TELEGRAM_URL} target="_blank" className="rounded-full bg-black px-6 py-3 font-semibold text-white hover:bg-zinc-800 transition">
+            <a href={TELEGRAM_URL} target="_blank" rel="noreferrer" className="rounded-full bg-black px-6 py-3 font-semibold text-white hover:bg-zinc-800 transition">
               Написать в TG
             </a>
             <a href={`mailto:${EMAIL}?subject=Хочу%20WTF%20воронку`} className="rounded-full border border-black px-6 py-3 font-semibold hover:bg-black hover:text-white transition">
@@ -248,8 +229,73 @@ export default function App() {
         </div>
       </section>
 
-      {/* FOOTER */}
+      {/* ========== FOOTER ========== */}
       <footer className="border-t border-zinc-200 py-10 text-sm text-zinc-500">
         <div className="mx-auto w-full max-w-6xl px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
-         
+          <div className="flex items-center gap-3">
+            <div className="h-5 w-5 rounded bg-black" />
+            <span>FN Agency · WTF Funnel</span>
+          </div>
+          <div className="flex items-center gap-4">
+            <a href={TELEGRAM_URL} target="_blank" rel="noreferrer" className="hover:text-black">TG</a>
+            <a href={`mailto:${EMAIL}`} className="hover:text-black">Email</a>
+          </div>
+        </div>
+      </footer>
 
+      {/* ========== QUIZ MODAL ========== */}
+      <AnimatePresence>
+        {quizOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70"
+          >
+            <div className="bg-white rounded-2xl p-6 max-w-md w-full relative">
+              <h2 className="text-xl font-bold mb-4">Квиз</h2>
+              <p>{steps[step]?.q}</p>
+              <div className="mt-4 space-y-2">
+                {steps[step]?.options.map((opt) => (
+                  <button
+                    key={opt}
+                    className="block w-full rounded-full border px-4 py-2 hover:bg-black hover:text-white"
+                    onClick={() => {
+                      setAnswers({ ...answers, [steps[step].key]: opt });
+                      if (step < steps.length - 1) setStep(step + 1);
+                      else setQuizOpen(false);
+                    }}
+                  >
+                    {opt}
+                  </button>
+                ))}
+              </div>
+              <button onClick={closeModals} className="absolute top-3 right-3 text-zinc-500">✕</button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* ========== COWARD MODAL ========== */}
+      <AnimatePresence>
+        {cowardOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70"
+          >
+            <div className="bg-white rounded-2xl p-6 max-w-sm w-full relative text-center">
+              <h2 className="text-xl font-bold mb-4">Понимаю 😅</h2>
+              <p className="mb-4">Нестандарт — страшно. Но ещё страшнее — остаться в ленте, где тебя не замечают.</p>
+              <a href={TELEGRAM_URL} target="_blank" rel="noreferrer" className="block rounded-full bg-black px-6 py-3 text-white font-semibold hover:bg-zinc-800">
+                Написать в Telegram
+              </a>
+              <button onClick={closeModals} className="absolute top-3 right-3 text-zinc-500">✕</button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}

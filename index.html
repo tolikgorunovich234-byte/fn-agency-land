@@ -1,17 +1,20 @@
-<!doctype html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FN AGENCY — WTF Funnel</title>
-  </head>
-  <body>
-    <!-- Фоллбек — будет виден, если JS не запустился -->
-    <div id="root" style="padding:16px;color:#0f0;font:16px/1.4 sans-serif">
-      ⏳ Загрузка… (если это сообщение не исчезает — значит JS не стартует)
-    </div>
+  <div id="root" style="padding:16px;color:#0f0;font:16px/1.4 sans-serif">
+    ⏳ Загрузка…
+  </div>
 
-    <!-- ВАЖНО: делаем относительный путь, чтобы исключить баг с абсолютным /src/... -->
-    <script type="module" src="./src/main.jsx"></script>
-  </body>
+  <!-- ЛОВУШКА ОШИБОК -->
+  <script>
+    window.addEventListener('error', (e) => {
+      const el = document.getElementById('root');
+      if (!el) return;
+      el.innerHTML =
+        '<div style="padding:16px;background:#200;color:#f66;font:14px/1.5 monospace;white-space:pre-wrap;">' +
+        '🔥 JS-ошибка:\n' + (e.error && e.error.stack ? e.error.stack : e.message) +
+        '</div>';
+    });
+  </script>
+
+  <!-- Путь к main.jsx -->
+  <script type="module" src="./src/main.jsx"></script>
+</body>
 </html>

@@ -1,7 +1,7 @@
 export default function App() {
   return (
-    <div style={{ padding: 24, color: "#fff", fontSize: 24 }}>
-      ✅ Рендер работает. Сейчас вернём настоящий экран.
+    <div style={{ padding: 24, background: "#111", color: "#0f0", fontSize: 24 }}>
+      ✅ Рендер работает. Если ты это видишь — JS ок.
     </div>
   );
 }

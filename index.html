@@ -1,12 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FN AGENCY – WTF Funnel</title>
+    <title>FN AGENCY — WTF Funnel</title>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <!-- Фоллбек — будет виден, если JS не запустился -->
+    <div id="root" style="padding:16px;color:#0f0;font:16px/1.4 sans-serif">
+      ⏳ Загрузка… (если это сообщение не исчезает — значит JS не стартует)
+    </div>
+
+    <!-- ВАЖНО: делаем относительный путь, чтобы исключить баг с абсолютным /src/... -->
+    <script type="module" src="./src/main.jsx"></script>
   </body>
 </html>

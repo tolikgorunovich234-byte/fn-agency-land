@@ -83,7 +83,7 @@ export default function App() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ type: "spring", stiffness: 80, damping: 16 }}
-            className="[text-wrap:balance] text-3xl sm:text-5xl md:text-7xl font-black leading-[1.05] tracking-tight"
+            className="[text-wrap:balance] text-[9vw] sm:text-5xl md:text-7xl font-black leading-[1.05] tracking-tight"
           >
             НЕСТАНДАРТНЫЙ МАРКЕТИНГ
             <br className="hidden sm:block" /> КОТОРЫЙ ВЫЗЫВАЕТ ПРИВЫКАНИЕ
@@ -128,14 +128,14 @@ export default function App() {
       </section>
 
       {/* INSIDE */}
-      <section id="inside" className="relative">
+      <section id="inside">
         <div className="mx-auto max-w-6xl px-3 sm:px-4 py-12 md:py-20">
           <h2 className="text-xl sm:text-2xl md:text-4xl font-extrabold uppercase tracking-tight">Что получишь в первые 7 дней</h2>
           <p className="mt-2 sm:mt-3 max-w-2xl text-sm opacity-80">
             Быстрая упаковка + креативы + ленд-аттракцион + бот/квиз + запуск трафика. Без воды.
           </p>
 
-          <div className="mt-8 md:mt-10 grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-3">
+          <div className="mt-8 md:mt-10 grid grid-cols-1 gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
               { t: "Аудит & идея", d: "Находим небанальный инсайт и формулируем Big Idea.", k: "1 день" },
               { t: "Креативы", d: "Снимаем/собираем 5–10 провокационных крео под ЦА.", k: "1–2 дня" },
@@ -166,7 +166,7 @@ export default function App() {
       <section id="process" className="border-y bg-neutral-950 text-white">
         <div className="mx-auto max-w-6xl px-3 sm:px-4 py-12 md:py-20">
           <h2 className="text-xl sm:text-2xl md:text-4xl font-extrabold uppercase tracking-tight">Как это происходит</h2>
-          <div className="mt-8 md:mt-10 grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-4">
+          <div className="mt-8 md:mt-10 grid grid-cols-1 gap-3 sm:gap-4 sm:grid-cols-2 md:grid-cols-4">
             {[
               { n: "01", t: "Старт", d: "15-минутный созвон, бриф и доступы." },
               { n: "02", t: "Сборка", d: "Идея → крео → ленд → бот/квиз." },
@@ -201,7 +201,7 @@ export default function App() {
       <section>
         <div className="mx-auto max-w-6xl px-3 sm:px-4 py-12 md:py-20">
           <h2 className="text-xl sm:text-2xl md:text-4xl font-extrabold uppercase tracking-tight">Где срабатывает нестандарт</h2>
-          <div className="mt-8 md:mt-10 grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-3">
+          <div className="mt-8 md:mt-10 grid grid-cols-1 gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
               { t: "Отели / рестораны", d: "Вирусные офферы, съёмка под TikTok, ленды-игры для бронирований." },
               { t: "Приложения / SaaS", d: "Продуктовые воронки, UGC, лид-магниты без скучных вебинаров." },
@@ -301,7 +301,7 @@ export default function App() {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: 24, opacity: 0 }}
               transition={{ type: "spring", stiffness: 140, damping: 16 }}
-              className="w-full max-w-xl rounded-t-2xl sm:rounded-2xl bg-white p-4 sm:p-6 shadow-2xl"
+              className="w-full max-w-xl rounded-t-2xl sm:rounded-2xl bg-white p-4 sm:p-6 shadow-2xl max-h-[85vh] overflow-y-auto"
             >
               <div className="flex items-center justify-between">
                 <div className="text-[11px] sm:text-xs uppercase tracking-wider opacity-60">Отбор в воронку</div>
@@ -376,7 +376,7 @@ export default function App() {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: 24, opacity: 0 }}
               transition={{ type: "spring", stiffness: 140, damping: 16 }}
-              className="w-full max-w-md rounded-t-2xl sm:rounded-2xl bg-white p-4 sm:p-6 shadow-2xl"
+              className="w-full max-w-md rounded-t-2xl sm:rounded-2xl bg-white p-4 sm:p-6 shadow-2xl max-h-[85vh] overflow-y-auto"
             >
               <div className="text-xl sm:text-2xl font-extrabold uppercase">Понимаю 😅</div>
               <p className="mt-2 text-sm opacity-80">

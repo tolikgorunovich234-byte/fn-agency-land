@@ -44,17 +44,9 @@ export default function App() {
     },
   ];
 
-  const heroBadge = (
-    <div className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-[10px] sm:text-xs tracking-wide uppercase">
-      <span className="font-medium">FN Agency</span>
-      <span className="opacity-60">•</span>
-      <span className="opacity-80">WTF Funnel</span>
-    </div>
-  );
-
   return (
     <div className="min-h-screen w-full bg-white text-black">
-      {/* header */}
+      {/* HEADER */}
       <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/70 bg-white/90 border-b">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-3 sm:px-4 py-2.5 sm:py-3">
           <div className="flex items-center gap-2 sm:gap-3">
@@ -66,24 +58,27 @@ export default function App() {
             <a href="#process" className="opacity-80 hover:opacity-100">Процесс</a>
             <a href="#faq" className="opacity-80 hover:opacity-100">FAQ</a>
           </nav>
-          <div className="flex items-center gap-2 sm:gap-3">
-            <a
-              href="http://t.me/FMARKETING_studio"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full border px-3 sm:px-4 py-2 text-[10px] sm:text-xs font-semibold uppercase tracking-wider hover:bg-black hover:text-white"
-            >
-              Telegram
-            </a>
-          </div>
+          <a
+            href="http://t.me/FMARKETING_studio"
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-full border px-3 sm:px-4 py-2 text-[10px] sm:text-xs font-semibold uppercase tracking-wider hover:bg-black hover:text-white"
+          >
+            Telegram
+          </a>
         </div>
       </header>
 
-      {/* hero */}
+      {/* HERO */}
       <section className="relative">
         <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(circle_at_top_right,rgba(0,0,0,0.04),transparent_40%),radial-gradient(circle_at_bottom_left,rgba(0,0,0,0.04),transparent_40%)]" />
         <div className="relative mx-auto max-w-6xl px-3 sm:px-4 pt-8 pb-10 sm:pt-12 md:pt-16 md:pb-16">
-          <div className="mb-4 sm:mb-6">{heroBadge}</div>
+          <div className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-[10px] sm:text-xs tracking-wide uppercase mb-4 sm:mb-6">
+            <span className="font-medium">FN Agency</span>
+            <span className="opacity-60">•</span>
+            <span className="opacity-80">WTF Funnel</span>
+          </div>
+
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -93,9 +88,10 @@ export default function App() {
             НЕСТАНДАРТНЫЙ МАРКЕТИНГ
             <br className="hidden sm:block" /> КОТОРЫЙ ВЫЗЫВАЕТ ПРИВЫКАНИЕ
           </motion.h1>
+
           <p className="mt-4 sm:mt-6 max-w-2xl text-sm sm:text-base leading-relaxed opacity-80">
-            Ломаем паттерны, собираем вирусные связки и запускаем трафик, который выделяет тебя из серой ленты. Никакой скучной
-            корпоративщины — только креатив, который работает.
+            Ломаем паттерны, собираем вирусные связки и запускаем трафик, который выделяет тебя из серой ленты.
+            Никакой скучной корпоративщины — только креатив, который работает.
           </p>
 
           <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3 sm:gap-4">
@@ -124,14 +120,14 @@ export default function App() {
         </div>
       </section>
 
-      {/* promo strip */}
+      {/* PROMO STRIP */}
       <section className="border-y bg-black text-white">
         <div className="mx-auto max-w-6xl px-3 sm:px-4 py-2.5 sm:py-3 text-[10px] sm:text-[11px] uppercase tracking-wider">
           ⚡ Предупреждение: этот маркетинг вызывает привыкание. Вход только для смелых.
         </div>
       </section>
 
-      {/* inside */}
+      {/* INSIDE */}
       <section id="inside" className="relative">
         <div className="mx-auto max-w-6xl px-3 sm:px-4 py-12 md:py-20">
           <h2 className="text-xl sm:text-2xl md:text-4xl font-extrabold uppercase tracking-tight">Что получишь в первые 7 дней</h2>
@@ -166,7 +162,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* process */}
+      {/* PROCESS */}
       <section id="process" className="border-y bg-neutral-950 text-white">
         <div className="mx-auto max-w-6xl px-3 sm:px-4 py-12 md:py-20">
           <h2 className="text-xl sm:text-2xl md:text-4xl font-extrabold uppercase tracking-tight">Как это происходит</h2>
@@ -201,8 +197,8 @@ export default function App() {
         </div>
       </section>
 
-      {/* use-cases */}
-      <section className="relative">
+      {/* USE CASES */}
+      <section>
         <div className="mx-auto max-w-6xl px-3 sm:px-4 py-12 md:py-20">
           <h2 className="text-xl sm:text-2xl md:text-4xl font-extrabold uppercase tracking-tight">Где срабатывает нестандарт</h2>
           <div className="mt-8 md:mt-10 grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-3">
@@ -220,28 +216,16 @@ export default function App() {
         </div>
       </section>
 
-      {/* faq */}
+      {/* FAQ */}
       <section id="faq" className="border-t">
         <div className="mx-auto max-w-6xl px-3 sm:px-4 py-12 md:py-20">
           <h2 className="text-xl sm:text-2xl md:text-4xl font-extrabold uppercase tracking-tight">Ответы на вопросы</h2>
           <div className="mt-6 sm:mt-8 space-y-3 sm:space-y-4">
             {[
-              {
-                q: "Это для кого?",
-                a: "Для проектов, где классика уже пробована или слишком скучна. Нужен быстрый тест гипотез с агрессивной креативной упаковкой.",
-              },
-              {
-                q: "Какие бюджеты?",
-                a: "Стартовые тесты обычно от $150–200 в день. Услуги агентства — от $1500 в месяц.",
-              },
-              {
-                q: "Сколько занимает запуск?",
-                a: "Подготовка 3–7 дней в зависимости от объёма съёмки и интеграций.",
-              },
-              {
-                q: "Что по рискам/банам?",
-                a: "Мы не идём в токсичные обещания и учитываем правила площадок, при этом сохраняем дерзкую подачу.",
-              },
+              { q: "Это для кого?", a: "Для проектов, где классика уже пробована или слишком скучна. Нужен быстрый тест гипотез с агрессивной креативной упаковкой." },
+              { q: "Какие бюджеты?", a: "Стартовые тесты обычно от $150–200 в день. Услуги агентства — от $1500 в месяц." },
+              { q: "Сколько занимает запуск?", a: "Подготовка 3–7 дней в зависимости от объёма съёмки и интеграций." },
+              { q: "Что по рискам/банам?", a: "Мы не идём в токсичные обещания и учитываем правила площадок, при этом сохраняем дерзкую подачу." },
             ].map((f, i) => (
               <details key={i} className="group rounded-2xl border p-4 sm:p-5">
                 <summary className="cursor-pointer list-none text-base sm:text-lg font-semibold uppercase">
@@ -293,7 +277,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* footer */}
+      {/* FOOTER */}
       <footer className="bg-white">
         <div className="mx-auto max-w-6xl px-3 sm:px-4 py-10 sm:py-12 text-[11px] sm:text-xs opacity-70">
           © FN Agency • Связь:{" "}
